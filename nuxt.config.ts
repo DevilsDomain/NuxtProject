@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
     app: {
         head: {
           title: 'My App',
@@ -14,6 +13,12 @@ export default defineNuxtConfig({
     typescript: {
         shim: false,
     },
+
+    modules: [
+      // ...
+      '@pinia/nuxt',
+    ],
+    
     css: ['~/assets/css/main.css'],
     postcss: {
         plugins: {
@@ -21,6 +26,7 @@ export default defineNuxtConfig({
           autoprefixer: {},
         },
       },
+      
     
       
 
