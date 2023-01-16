@@ -1,4 +1,6 @@
 <script setup>
+import { useCounterStore } from '~~/stores/user';
+
 
 const { x, y } = useMouseTracker()
 const counter = useState('counter', ()=> 0)
