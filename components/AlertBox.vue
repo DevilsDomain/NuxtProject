@@ -12,6 +12,7 @@ const props = defineProps<{
 
 <template>
     <div :class="type">
+        
         this is an alert box!
         <slot></slot>
     </div>
