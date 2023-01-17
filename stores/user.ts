@@ -2,29 +2,24 @@ import {defineStore} from 'pinia';
 
 export const useUserStore = defineStore('user' , () => {
      // state
-     let name = "";
+     const name = ref('');
      const logged = ref(false);
-
+ 
      // getters
-     const userName = computed(() => {
-         if (logged.value) {
-             return name;
-         }
-         return "";
-     });
+     const userName = computed(() => name.value);
      const isLogged = computed(() => logged.value);
-
-     // actions
+ 
+     //actions
      function login(_name: string):void {
          
          logged.value = true;
-         name = _name;
+         name.value = _name;
  
      }
 
      function logout() {
         logged.value = false;
-        name = "";
+        name.value = '';
      }
 
     return {userName, isLogged, login, logout};
